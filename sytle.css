@@ -14,6 +14,7 @@
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
+    --color-night: #183449;
 
     /* Font size */
     --font-large: 48px;
@@ -29,8 +30,6 @@
 
     /* Size*/
     --size-border-radius:4px;
-
-
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -89,7 +88,7 @@ p {
 #navbar{
     display: flex;
     justify-content:space-between;
-    background-color: var(--color-skyblue);
+    background-color: var(--color-night);
     align-items: center;
     color: var(--color-white);
     padding: 16px
@@ -102,6 +101,7 @@ p {
 
 .navbar__menu{
     display: flex;
+    text-align: end;
 }
 
 .navbar__menu__item{
@@ -115,10 +115,19 @@ p {
     background-color: var(--color-dark-skyblue);
 }
 
+.navbar__toggle-btn{
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
+
 
 /* Home */
 #home{
-    background: url("back.png") center/cover no-repeat;
+    background: url("photo/night.png") center/cover no-repeat;
     padding: 40px;
     text-align: center;
 }
@@ -166,7 +175,14 @@ p {
     margin: 80px 0;
 }
 
-.major__icon{
+.about__jobs,.about__education,.about__language_certification{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+}
+
+
+.major__icon,.job__icon,.education__icon,.language__icon,.certification__icon{
     margin:auto;
     margin-bottom: 16px;
     width: 170px;
@@ -178,13 +194,13 @@ p {
     border: 1px solid var(--color-blue);
 }
 
-.major__icon:hover{
+.major__icon:hover,.job__icon:hover,.education__icon:hover,.language__icon:hover,.certification__icon:hover{
     color: lightpink;
     transform: rotate(-30deg) scale(1.1);
     transition: all 300ms ease;
 }
 
-.major__title,.major__description{
+.major__title,.major__description,.job__title,.job__description,.education__title,.education__description{
     color: var(--color-dark-grey);
 }
 
@@ -192,25 +208,6 @@ p {
     font-size: var(--font-small);
 }
 
-.jobs{
-    display: flex;
-    align-items: center;
-}
-
-.job__description{
-    margin: 0 16px;
-    text-align: left;
-}
-
-.job__name, .job__period{
-    color: var(--color-light-grey);
-}
-.job_name{
-    font-size: var(--font-small);
-}
-.job_period{
-    font-size: var(--font-micro);
-}
 
 /* Skills */
 
@@ -310,4 +307,36 @@ p {
 .project__img{
     max-width: 100%;
     max-height: 100%;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width:768px) {
+    .navbar__toggle-btn {
+        display: block;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .about__majors, .about__jobs, .about__education, .about__language_certification {
+        flex-direction: column;
+    }
+
+    .skillset{
+        flex-direction: column;
+    }
+
+    .project{
+        flex-grow: 1;
+    }
+
 }
