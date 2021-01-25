@@ -86,12 +86,20 @@ p {
 
 /* Navbar */
 #navbar{
+    position:fixed;
+    width: 100%;
     display: flex;
     justify-content:space-between;
-    background-color: var(--color-night);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
-    padding: 16px
+    padding: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+#navbar.navbar--dark{
+    background:#18324a;
+    padding: 8px;
 }
 
 .navbar__logo{
@@ -111,6 +119,13 @@ p {
     border-radius: var(--size-border-radius);
 }
 
+
+.navbar__menu__item.active {
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+
 .navbar__menu__item:hover{
     background-color: var(--color-dark-skyblue);
 }
@@ -129,6 +144,7 @@ p {
 #home{
     background: url("photo/night.png") center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
