@@ -16,30 +16,33 @@
             <a href="#">Joshua</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active">Home</li>
-            <li class="navbar__menu__item">Programming</li>
-            <li class="navbar__menu__item">Experience</li>
-            <li class="navbar__menu__item">Education</li>
-            <li class="navbar__menu__item">Language & Certification</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">My work</li>
-            <li class="navbar__menu__item">Contact</li>
+            <li class="navbar__menu__item active" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#programming">Programming</li>
+            <li class="navbar__menu__item" data-link="#experience">Experience</li>
+            <li class="navbar__menu__item" data-link="#education">Education</li>
+            <li class="navbar__menu__item" data-link="#language">Language & Certification</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">My work</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
         <button class="navbar__toggle-btn">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
     <section id="home">
-        <img src="photo/profile.jpg" alt="Joshua's profile photo" class="home__avatar">
-        <h1 class="home__title">Hello,<br/>I'm Joshua</h1>
-        <h2 class="home__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
-        <button class="home__contact">Contact Me</button>
+        <div class ="home__container">
+            <img src="photo/profile.jpg" alt="Joshua's profile photo" class="home__avatar">
+            <h1 class="home__title">Hello,<br/>I'm Joshua</h1>
+            <h2 class="home__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+            <button class="home__contact">Contact Me</button>
+        </div>
     </section>
     <section id="about" class="section">
      <div class="section__container">
-         <h1>Programming</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-             <div class="about__majors">
+         <section id="programming">
+             <h1>Programming</h1>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                 <div class="about__majors">
                 <div class="major">
                     <div class="major__icon">
                         <i class="fab fa-html5"></i>
@@ -62,6 +65,8 @@
                     <div class="major__description">Android Java</div>
                 </div>
             </div>
+         </section>
+         <section id="experience">
          <h1>Experience</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <div class="about__jobs">
@@ -84,28 +89,32 @@
                     </div>
                 </div>
             </div>
-         <h1>Education</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-         <div class="about__education">
-             <div class="education">
-                 <div class="education__icon">
-                     <i class="fas fa-chalkboard-teacher"></i>
+         </section>
+         <section id="education">
+             <h1>Education</h1>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <div class="about__education">
+                 <div class="education">
+                     <div class="education__icon">
+                         <i class="fas fa-chalkboard-teacher"></i>
+                     </div>
+                     <div class="education__description">
+                         <h2 class="education__title">이수과목</h2>
+                         <div class="education__description">2017~2020</div>
+                     </div>
                  </div>
-                 <div class="education__description">
-                     <h2 class="education__title">이수과목</h2>
-                     <div class="education__description">2017~2020</div>
+                 <div class="education">
+                     <div class="education__icon">
+                         <i class="fas fa-book"></i>
+                     </div>
+                     <div class="education__description">
+                         <h2 class="education__title">IT 서적</h2>
+                         <div class="education__description">2020.07~2020.12</div>
+                     </div>
                  </div>
              </div>
-             <div class="education">
-                 <div class="education__icon">
-                     <i class="fas fa-book"></i>
-                 </div>
-                 <div class="education__description">
-                     <h2 class="education__title">IT 서적</h2>
-                     <div class="education__description">2020.07~2020.12</div>
-                 </div>
-             </div>
-         </div>
+         </section>
+         <section id="language">
          <h1>Language & Certification</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
              <div class="about__language_certification">
@@ -128,7 +137,8 @@
                      </div>
                  </div>
             </div>
-        </div>
+         </section>
+     </div>
     </section>
     <section id="skills" class="section">
         <div class="section__container">
@@ -266,9 +276,9 @@
         </div>
     </section>
     <section id="contact" class="section"></section>
-
-
+    <button class="arrow-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
-
 </body>
 </html>
