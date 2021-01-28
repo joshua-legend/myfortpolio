@@ -19,7 +19,7 @@
     /* Font size */
     --font-large: 48px;
     --font-medium: 28px;
-    --font-regular: 18px;
+    --font-regular: 22px;
     --font-small: 16px;
     --font-micro: 14px;
 
@@ -82,6 +82,7 @@ p {
     font-weight: var(--weight-regular);
     color: var(--color-black);
     margin: 4px 0;
+    font-family: 'Jua', sans-serif;
 }
 
 /* Navbar */
@@ -117,17 +118,11 @@ p {
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
-    border-radius: var(--size-border-radius);
-}
-
-
-.navbar__menu__item.active {
-    border: 1px solid white;
     border-radius: 4px;
 }
 
-
 .navbar__menu__item:hover{
+    border-color: whitesmoke;
     background-color: var(--color-dark-skyblue);
 }
 
@@ -192,14 +187,14 @@ p {
     margin: 80px 0;
 }
 
-.about__jobs,.about__education,.about__language_certification{
+.about__jobs,.about__education,.about__language_certification,.about__project{
     display: flex;
     justify-content: space-evenly;
     margin: 80px 0;
 }
 
 
-.major__icon,.job__icon,.education__icon,.language__icon,.certification__icon{
+.major__icon,.job__icon,.education__icon,.language__icon,.certification__icon,.project__icon{
     margin:auto;
     margin-bottom: 16px;
     width: 170px;
@@ -211,13 +206,13 @@ p {
     border: 1px solid var(--color-blue);
 }
 
-.major__icon:hover,.job__icon:hover,.education__icon:hover,.language__icon:hover,.certification__icon:hover{
+.major__icon:hover,.job__icon:hover,.education__icon:hover,.language__icon:hover,.certification__icon:hover,.project__icon:hover{
     color: lightpink;
     transform: rotate(-30deg) scale(1.1);
     transition: all 300ms ease;
 }
 
-.major__title,.major__description,.job__title,.job__description,.education__title,.education__description{
+.major__title,.major__description,.job__title,.job__description,.education__title,.education__description,.project__description{
     color: var(--color-dark-grey);
 }
 
@@ -229,7 +224,7 @@ p {
 /* Skills */
 
 #skills{
-    background-color: #fff59d;
+    background-color: #b3e5fc;
 }
 
 .skill__description{
@@ -270,29 +265,41 @@ p {
     background-color:#546e7a;
 }
 
+.tools{
+    background-color: darkgray;
+}
+
+.tools__list,.etc__list{
+    font-size: 20px;
+}
+
+.tools,.etc{
+    padding: 20px;
+}
+
 /* Work */
 
-.catagory__btn{
+.category__btn{
     border: 1px solid darkgray;
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
 }
 
-.catagory__btn:active,
-.catagory__btn:hover{
+.category__btn.selected,
+.category__btn:hover{
     background-color:dodgerblue;
     color:whitesmoke;
 }
 
-/*.catagory__btn:active .catagory__count,*/
-.catagory__btn:hover>.catagory__count,
-.catagory__btn:active>.catagory__count{
+/*.category__btn:active .category__count,*/
+.category__btn:hover>.category__count,
+.category__btn.selected>.category__count{
     opacity:1;
     top: 0;
 }
 
-.catagory__count{
+.category__count{
     border: 1px solid #546e7a;
     border-radius: 50%;
     background-color: #ffa726;
@@ -311,19 +318,56 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+
+.work__projects.anim-out{
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
 }
 
 .project{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 280px;
     height: 250px;
     margin: 2px;
-    background-color:#bbdefb;
+    background-color:#e0f2f1;
+}
+
+.project.invisible{
+    display: none;
 }
 
 .project__img{
     max-width: 100%;
-    max-height: 100%;
+    max-height: 70%;
+}
+
+.project__description{
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.project:hover .project__description{
+    opacity: 0.95;
+    transform: translateY(0px);
+}
+
+.project__description h3, span {
+    color: white;
 }
 
 /* Scroll */
@@ -358,13 +402,21 @@ p {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: #18324a;
     }
 
+    #navbar.navbar--dark{
+        padding: 16px;
+    }
     .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar__menu.open{
+        display: block;
     }
 
     .about__majors, .about__jobs, .about__education, .about__language_certification {
