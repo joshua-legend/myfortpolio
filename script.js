@@ -54,6 +54,20 @@ function scrollIntoView(selector) {
   scrollTo.scrollIntoView({behavior:'smooth'})
 }
 
+/*
+* projects.foreach((project) =>{
+*  console.log(project);
+* });
+*
+* for(let project of projects){
+*  console.log(project);
+* }
+*
+* for(let i=0; i< projects.length; i++){
+*  project = projects[i];
+* }
+* */
+
 /* Projects */
 
 const workBtnContainer = document.querySelector('.work__categories')
@@ -87,4 +101,3 @@ const navbarToggleBtn = document.querySelector('.navbar__toggle-btn')
 navbarToggleBtn.addEventListener('click',()=>{
   navbarMenu.classList.toggle('open');
 })
-
