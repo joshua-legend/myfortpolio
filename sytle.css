@@ -121,6 +121,8 @@ p {
     border-radius: 4px;
 }
 
+
+
 .navbar__menu__item:hover{
     border-color: whitesmoke;
     background-color: var(--color-dark-skyblue);
@@ -220,7 +222,7 @@ p {
 
 .about__majors{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 80px 0;
 }
 
