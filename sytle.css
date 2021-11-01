@@ -100,7 +100,7 @@ p {
 }
 
 #navbar.navbar--dark{
-    background:#18324a;
+    background:#1B5062;
     padding: 8px;
 }
 
@@ -140,21 +140,30 @@ p {
 
 /* Home */
 #home{
-    background: url("photo/night.png") center/cover no-repeat;
+    background: url("photo/background.png") center/cover no-repeat;
     padding: 40px;
     padding-top: 120px;
     text-align: center;
 }
 
+.home__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 500px;
+    align-items: center;
+}
+
 .home__avatar{
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     border: 2px solid ghostwhite;
 }
 
 .home__title,.home__description{
     color:whitesmoke;
+    font-family: 'Gowun Dodum'
 }
 
 .home__contact{
@@ -219,21 +228,23 @@ p {
 }
 
 /* About */
-
-.about__majors{
-    display: flex;
-    justify-content: space-around;
-    margin: 80px 0;
-}
-
-.about__jobs,.about__education,.about__language_certification,.about__project{
+.about__majors,.about__jobs,.about__education,.about__foreign_certification,.about__project{
     display: flex;
     justify-content: space-evenly;
     margin: 80px 0;
 }
 
+.about_skills{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
 
-.major__icon,.job__icon,.education__icon,.language__icon,.certification__icon,.project__icon{
+.about_skills > div{
+    display: flex; flex-direction: row;justify-content: space-around;
+}
+
+.major__icon,.job__icon,.education__icon,.certification__icon,.project__icon,.foreign__icon{
     margin:auto;
     margin-bottom: 16px;
     width: 170px;
@@ -244,6 +255,9 @@ p {
     border-radius: 50%;
     border: 1px solid var(--color-blue);
 }
+
+.language__icon{font-size: 70px;}
+
 
 .major__icon:hover,.job__icon:hover,.education__icon:hover,.language__icon:hover,.certification__icon:hover,.project__icon:hover{
     color: lightpink;
@@ -260,12 +274,13 @@ p {
 }
 
 
-
+.language{
+    width: 25%;
+}
 
 /* Skills */
 
 #skills{
-    background-color: #b3e5fc;
 }
 
 .skill__description{
